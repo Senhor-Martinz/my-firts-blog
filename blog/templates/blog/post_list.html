@@ -6,12 +6,17 @@
 
     </head>
 <body>
-<h3>Titulo Dos Guris</h3>
-<p>Assunto dos guri pae ksjisoos jsisioskoa idiodoskjao jdjisoosn</p>
-<hr>
-<h3>Outro Titulo</h3>
-<p>Assusto dos guri pai sinalizamos kajnsiizjjsjsjsoozkkajjzjizizio zijdjjjjjjd izkosksjsjz</p>
+{% for post in posts %}
 
+<div>
+    <p>publicado: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+
+
+
+{% endfor %}
 </body>
 
 </html>
